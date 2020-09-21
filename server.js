@@ -16,7 +16,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(morgan('tiny'));
 
 // helmet
-app.use(helmet());
+app.use(helmet({
+    contentSecurityPolicy: { directives: {
+        defaultSrc: ["'self'"],
+        fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+        imgSrc: ["'self'", 'https://res.cloudinary.com', 'data:', 'blob:'],
+        objectSrc: ["'none'"],
+        scriptSrc: ["'self'"],
+        styleSrc: ["'self'", 'https://fonts.googleapis.com'],
+    }}
+}));
 
 // routing
 const quizRouter = require('./routes/quizRouter');
