@@ -13,8 +13,8 @@ const config = (process.env.PG_URI) ? ({
 });
 
 const pool = new Pool(config);
-pool.connect((err)=>{
-    if(err){
+pool.connect((err) => {
+    if (err) {
         return console.error('Error acquiring client', err.stack);
     }
 })
