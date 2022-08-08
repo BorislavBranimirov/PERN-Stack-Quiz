@@ -24,8 +24,7 @@ const Modal = (props) => {
                     <div ref={modalRef} className="modal-content">
                         <div className="modal-header">
                             <h5 className="modal-title">{props.title}</h5>
-                            <button onClick={props.declineHandler} className="close">
-                                <span>&times;</span>
+                            <button onClick={props.declineHandler} className="btn-close">
                             </button>
                         </div>
                         <div className="modal-body">

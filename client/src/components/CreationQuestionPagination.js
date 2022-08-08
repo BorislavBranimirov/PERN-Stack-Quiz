@@ -15,7 +15,7 @@ const isQuestionFilled = (question) => {
     return true;
 };
 
-const CreationgQuestionPagination = (props) => {
+const CreationQuestionPagination = (props) => {
     const paginationWrapper = useRef(null);
 
     // every time the user moves to a different questions or adds/deletes a questions, perform validation
@@ -23,7 +23,7 @@ const CreationgQuestionPagination = (props) => {
         return props.questions.arr.map((question, index) => {
             let bgColor = 'secondary';
             if (isQuestionFilled(question))
-                bgColor = 'info';
+                bgColor = 'primary';
             if (props.questions.current === index)
                 bgColor = 'danger';
 
@@ -31,7 +31,7 @@ const CreationgQuestionPagination = (props) => {
                 <button
                     key={index}
                     onClick={() => props.setCurrentQuestion(index)}
-                    className={`btn btn-${bgColor} btn-sm m-2 rounded-lg`}
+                    className={`btn btn-${bgColor} btn-sm m-2 rounded-2`}
                     style={{
                         width: '3em',
                         height: '2.5em'
@@ -47,9 +47,9 @@ const CreationgQuestionPagination = (props) => {
         <React.Fragment>
             <button
                 onClick={() => paginationWrapper.current.classList.toggle('d-none')}
-                className="btn btn-primary btn-block d-lg-none rounded-pill px-4 mb-2"
+                className="btn btn-primary w-100 d-lg-none rounded-pill px-4 mb-2"
             >
-                Toggle Quiz Creation Navigation
+                Toggle Quiz Navigation
             </button>
             <div ref={paginationWrapper} className="d-lg-block">
                 <div className="d-flex flex-wrap justify-content-center">
@@ -60,4 +60,4 @@ const CreationgQuestionPagination = (props) => {
     );
 };
 
-export default CreationgQuestionPagination;
+export default CreationQuestionPagination;

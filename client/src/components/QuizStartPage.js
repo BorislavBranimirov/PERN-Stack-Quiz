@@ -18,7 +18,7 @@ const QuizStartPage = (props) => {
             <div className="card-body">
                 <h1 className="card-title">{quiz.title}</h1>
                 <p className="card-text text-preline">{quiz.description}</p>
-                <div className="text-right">
+                <div className="text-end">
                     <button
                         onClick={() => props.setCurrentPage((value) => value + 1)}
                         className="btn btn-primary px-5 rounded-pill"

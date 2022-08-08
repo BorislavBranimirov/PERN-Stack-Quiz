@@ -19,7 +19,7 @@ const QuizQuestion = (props) => {
                         <input
                             type="radio"
                             name="answerOption"
-                            className="form-check-input mr-2 my-auto flex-shrink-0"
+                            className="form-check-input me-2 my-auto flex-shrink-0"
                             id={'check' + answer['pos_num']}
                             data-answer-id={answer.id}
                             onChange={props.optionChangeHandler}
@@ -42,12 +42,12 @@ const QuizQuestion = (props) => {
         <React.Fragment>
             <div>
                 <h3 className="text-break text-preline">
-                    <span className="font-weight-bold">{props.currentQuestionNumber}. </span>
+                    <span className="fw-bold">{props.currentQuestionNumber}. </span>
                     {question.text}
                 </h3>
                 {(question.reports > 0) && (
                     <div className="d-flex align-items-center justify-content-center mb-3">
-                        <FontAwesomeIcon icon={faExclamationCircle} size="2x" className="mr-2 text-danger" />
+                        <FontAwesomeIcon icon={faExclamationCircle} size="2x" className="me-2 text-danger" />
                         <span>This question has been flagged as incorrect by some users</span>
                     </div>
                 )}

@@ -71,26 +71,26 @@ const QuizResultsPage = (props) => {
 
                 let answerColor = 'border-secondary answer-default';
                 let progressColor = 'bg-secondary';
-                let resultIcon = <FontAwesomeIcon icon={faMinusCircle} size="2x" className="mr-2 text-secondary" />;
+                let resultIcon = <FontAwesomeIcon icon={faMinusCircle} size="2x" className="me-2 text-secondary" />;
                 if (answer.is_correct) {
                     answerColor = 'border-success answer-correct';
                     progressColor = 'bg-success';
-                    resultIcon = <FontAwesomeIcon icon={faCheckCircle} size="2x" className="mr-2 text-success" />;
+                    resultIcon = <FontAwesomeIcon icon={faCheckCircle} size="2x" className="me-2 text-success" />;
                 }
                 if (answerArr[index] === answer.id && !answer.is_correct) {
                     answerColor = 'border-danger answer-wrong';
                     progressColor = 'bg-danger';
-                    resultIcon = <FontAwesomeIcon icon={faTimesCircle} size="2x" className="mr-2 text-danger" />;
+                    resultIcon = <FontAwesomeIcon icon={faTimesCircle} size="2x" className="me-2 text-danger" />;
                 }
 
                 return (
                     <div
                         key={answer.id}
-                        className={`card p-3 my-3 ${answerColor} rounded-lg`}
+                        className={`card p-3 my-3 ${answerColor} rounded-2`}
                         style={{ borderWidth: '0.2em' }}
                     >
                         <div className="d-flex align-items-center">
-                            <small className="text-center mr-2" style={{ width: '3.5em' }}>
+                            <small className="text-center me-2" style={{ width: '3.5em' }}>
                                 {percentOfTotal}%
                             </small>
                             <div className="progress w-100">
@@ -104,7 +104,7 @@ const QuizResultsPage = (props) => {
                             {resultIcon}
                             <h5 className="m-0 text-break text-preline">
                                 {((answerArr[index] === answer.id) && (
-                                    <span className="font-weight-bold">You answered: </span>
+                                    <span className="fw-bold">You answered: </span>
                                 ))}
                                 {answer.text}
                             </h5>
@@ -116,7 +116,7 @@ const QuizResultsPage = (props) => {
             return (
                 <div key={question.id} className="my-4">
                     <h3 className="text-break text-preline">
-                        <span className="font-weight-bold">{question.pos_num}. </span>
+                        <span className="fw-bold">{question.pos_num}. </span>
                         {question.text}
                     </h3>
                     <div className="d-flex justify-content-end">
@@ -126,7 +126,7 @@ const QuizResultsPage = (props) => {
                             className="btn btn-primary rounded-pill px-4 py-2"
                             disabled={reportedQuestionIds[question.id]}
                         >
-                            <FontAwesomeIcon icon={faFlag} className="mr-2" />
+                            <FontAwesomeIcon icon={faFlag} className="me-2" />
                         Flag Question As Incorrect
                         </button>
                     </div>

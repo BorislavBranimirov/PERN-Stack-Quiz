@@ -6,7 +6,7 @@ const QuestionPagination = (props) => {
     const answers = props.answerArr.map((answer, index) => {
         let bgColor = 'secondary';
         if (answer)
-            bgColor = 'info';
+            bgColor = 'primary';
         if (props.currentQuestionNumber === index + 1)
             bgColor = 'danger';
 
@@ -14,7 +14,7 @@ const QuestionPagination = (props) => {
             <button
                 key={index}
                 onClick={() => props.setCurrentPage(index + 1)}
-                className={`btn btn-${bgColor} btn-sm m-2 rounded-lg`}
+                className={`btn btn-${bgColor} btn-sm m-2 rounded-2`}
                 style={{
                     width: '3em',
                     height: '2.5em'
@@ -29,9 +29,9 @@ const QuestionPagination = (props) => {
         <React.Fragment>
             <button
                 onClick={() => paginationWrapper.current.classList.toggle('d-none')}
-                className="btn btn-primary btn-block d-lg-none my-2"
+                className="btn btn-primary w-100 d-lg-none my-2"
             >
-                Toggle quiz navigation
+                Toggle Quiz Navigation
             </button>
             <div ref={paginationWrapper} className="d-none d-lg-block">
                 <div className="d-flex flex-wrap justify-content-center">

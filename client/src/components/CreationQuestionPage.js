@@ -154,14 +154,14 @@ const CreationQuestionPage = (props) => {
                     className="btn btn-primary rounded-pill px-4 py-2 mb-3 mb-md-0"
                     onClick={props.addQuestion}
                 >
-                    <FontAwesomeIcon icon={faPlus} className="mr-2" />
+                    <FontAwesomeIcon icon={faPlus} className="me-2" />
                     Add New Question
                 </button>
                 <button
                     className="btn btn-danger rounded-pill px-4 py-2 mb-3 mb-md-0"
                     onClick={handleQuestionDelete}
                 >
-                    <FontAwesomeIcon icon={faTrash} className="mr-2" />
+                    <FontAwesomeIcon icon={faTrash} className="me-2" />
                     Delete Current Question
                 </button>
             </div>

@@ -139,7 +139,7 @@ const Quiz = () => {
     if (!quizLoaded) {
         return (
             <div className="d-flex mt-5 mx-auto spinner-border">
-                <span className="sr-only">Loading...</span>
+                <span className="visually-hidden">Loading...</span>
             </div>
         );
     }

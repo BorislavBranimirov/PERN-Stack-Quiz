@@ -34,7 +34,7 @@ const CreationStartPage = (props) => {
 
     return (
         <div className="d-flex flex-column flex-md-row justify-content-center">
-            <div className="flex-fill mr-md-5">
+            <div className="flex-fill me-md-5">
                 <h3>Quiz info:</h3>
                 <div className="mb-3">
                     <label htmlFor="title" className="form-label">
@@ -69,22 +69,14 @@ const CreationStartPage = (props) => {
                     <label htmlFor="image" className="form-label">
                         Quiz image (optional):
                     </label>
-                    <div className="form-file">
-                        <input
-                            type="file"
-                            id="image"
-                            name="image"
-                            className="form-file-input"
-                            onChange={handleChange}
-                            accept=".png, .jpg, .jpeg"
-                        />
-                        <label htmlFor="image" className="form-file-label">
-                            <span className="form-file-text">
-                                {props.quizInfo.image.name || 'Select file...'}
-                            </span>
-                            <span className="form-file-button">Browse</span>
-                        </label>
-                    </div>
+                    <input
+                        type="file"
+                        id="image"
+                        name="image"
+                        className="form-control"
+                        onChange={handleChange}
+                        accept=".png, .jpg, .jpeg"
+                    />
                     <small className="d-block text-muted mt-2">
                         Supported formats: PNG, JPEG
                     </small>
