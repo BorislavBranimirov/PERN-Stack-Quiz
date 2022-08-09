@@ -15,7 +15,7 @@ Run the project by following these instructions:
   - CLOUDINARY_API_SECRET - The API secret from your Cloudinary account
   - NODE_ENV - Set whether the app should run in `development` mode and have the server act only as an api or in `production` mode and have the server both fetch the client bundle and the api (if not specified, will run in development mode)
   - There are two ways of connecting to a PostgreSQL database:
-    - With a URI:
+    - With a URI (when using SSL connection):
       - PG_URI - The PostgreSQL URI to connect to
     - With connection parameters:
       - PG_USER - The database user on whose behalf the connection is being made

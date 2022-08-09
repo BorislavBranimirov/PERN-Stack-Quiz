@@ -4,18 +4,15 @@ const { Pool } = require('pg');
 // URI takes precedence if both methods are provided
 const config = (process.env.PG_URI) ? ({
     connectionString: process.env.PG_URI,
-    ssl: process.env.NODE_ENV === 'production' ? {
+    ssl: {
         rejectUnauthorized: false
-    } : false
+    }
 }) : ({
     user: process.env.PG_USER,
     host: process.env.PG_HOST,
     database: process.env.PG_DB,
     password: process.env.PG_PASSWORD,
     port: process.env.PG_PORT,
-    ssl: process.env.NODE_ENV === 'production' ? {
-        rejectUnauthorized: false
-    } : false
 });
 
 const pool = new Pool(config);
