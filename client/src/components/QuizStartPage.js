@@ -2,7 +2,7 @@ import React from 'react';
 
 const QuizStartPage = (props) => {
     const quiz = props.quiz;
-    const imageURL = 'https://res.cloudinary.com/quiz-media/image/upload/' + quiz.image;
+    const imageURL = `https://res.cloudinary.com/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload/` + quiz.image;
 
     return (
         <div className="quiz-start-page card">

@@ -124,7 +124,7 @@ const Home = () => {
 
     const quizListItems = useMemo(() => {
         return quizzes.map((quiz) => {
-            const imageURL = 'https://res.cloudinary.com/quiz-media/image/upload/' + quiz.image;
+            const imageURL = `https://res.cloudinary.com/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME}/image/upload/` + quiz.image;
 
             return (
                 <div key={quiz.id} className="col">
