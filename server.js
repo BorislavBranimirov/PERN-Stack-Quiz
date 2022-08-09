@@ -17,6 +17,7 @@ app.use(morgan('tiny'));
 
 // helmet
 app.use(helmet({
+    crossOriginEmbedderPolicy: false,
     contentSecurityPolicy: { directives: {
         defaultSrc: ["'self'"],
         fontSrc: ["'self'", 'https://fonts.gstatic.com'],
