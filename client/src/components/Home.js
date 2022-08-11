@@ -55,10 +55,12 @@ const Home = () => {
     };
 
     fetchQuizzes(location.search);
+  }, [location.search, setNotification]);
 
+  useEffect(() => {
     // scroll to top of page
     window.scrollTo(0, 0);
-  }, [location.search, setNotification]);
+  }, [quizzes]);
 
   const handlePageChange = (e) => {
     let diff = 0;
