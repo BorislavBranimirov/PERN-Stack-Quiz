@@ -24,13 +24,17 @@ const App = () => {
             </div>
           </nav>
           <Switch>
-            <Route exact path='/'>
+            <Route exact path="/">
               <Home />
             </Route>
-            <Route exact path='/quiz/:id'
-              render={(props) => <Quiz key={props.match.params.id} {...props} />}
+            <Route
+              exact
+              path="/quiz/:id"
+              render={(props) => (
+                <Quiz key={props.match.params.id} {...props} />
+              )}
             />
-            <Route exact path='/create-quiz'>
+            <Route exact path="/create-quiz">
               <CreationPage />
             </Route>
             <Route>

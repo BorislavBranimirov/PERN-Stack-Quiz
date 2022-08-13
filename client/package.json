@@ -24,18 +24,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app",
-    "overrides": [
-      {
-        "files": [
-          "*.js"
-        ],
-        "rules": {
-          "default-case": "off",
-          "react-hooks/exhaustive-deps": "off"
-        }
-      }
-    ]
+    "extends": "react-app"
   },
   "browserslist": {
     "production": [

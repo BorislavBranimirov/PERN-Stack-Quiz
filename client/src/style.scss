@@ -3,68 +3,68 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 * {
-    box-sizing: border-box;
-    font-family: 'Inter', Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 input:not([type='text']):not([type='search']), label {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .text-preline {
-    white-space: pre-line;
+  white-space: pre-line;
 }
 
 .card-img-top {
-    height: 25vh;
-    width: 100%;
-    object-fit: cover;
+  height: 25vh;
+  width: 100%;
+  object-fit: cover;
 }
 
 .quiz-start-page .card-img-top {
-    height: 40vh;
+  height: 40vh;
 }
 
 @include media-breakpoint-up(md) {
-    .quiz-start-page {
-        margin-right: auto;
-        margin-left: auto;
-        width: 65%;
-    }
+  .quiz-start-page {
+    margin-right: auto;
+    margin-left: auto;
+    width: 65%;
+  }
 }
 
 @include media-breakpoint-up(xl) {
-    .quiz-start-page {
-        margin-right: auto;
-        margin-left: auto;
-        width: 45%;
-    }
+  .quiz-start-page {
+    margin-right: auto;
+    margin-left: auto;
+    width: 45%;
+  }
 }
 
 .answer, .answer * {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .answer:hover {
-    background-color: $light;
+  background-color: $light;
 }
 
 .answer-wrong {
-    background-color: $red-200;
+  background-color: $red-200;
 }
 
 .answer-correct {
-    background-color: $green-200;
+  background-color: $green-200;
 }
 
 .answer-default {
-    background-color: $gray-400;
+  background-color: $gray-400;
 }

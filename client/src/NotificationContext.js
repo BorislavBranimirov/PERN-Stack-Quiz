@@ -1,8 +1,8 @@
 import React from 'react';
 
 const NotificationContext = React.createContext({
-    notification: null,
-    setNotification: () => { }
+  notification: null,
+  setNotification: () => {},
 });
 
 export default NotificationContext;
