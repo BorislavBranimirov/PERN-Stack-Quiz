@@ -44,6 +44,13 @@ npm run server
 
 ```
 
+- You can reseed the database (resetting any previous information and overwriting it with some example quizzes) by importing the `reseed.sql` file from the config folder
+  - Run psql and connect your database, then import with
+    - `\i 'C:/some/disk/location/reseed.sql'`
+  - Or import directly
+    - `psql -U yourdatabaseuser -d yourdatabasename -f "C:/some/disk/location/reseed.sql"`
+    - `psql -U yourdatabaseuser yourdatabasename < "C:/some/disk/location/reseed.sql"`
+
 ## Author
 
 Borislav Branimirov
