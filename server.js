@@ -18,7 +18,6 @@ app.use(morgan('tiny'));
 // helmet
 app.use(
   helmet({
-    crossOriginEmbedderPolicy: false,
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
